@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic Calculator</title>
+		<link rel="stylesheet" href="assets/stylesheet/style.css">
+	</head>
+	<body>
+		<script type="text/javascript">
+			const SPENDING_THRESHOLD = 200;
+			const TAX_RATE = 0.08;
+			const PHONE_PRICE = 99.99;
+			const ACCESSORY_PRICE = 9.99;
+
+			var bank_balance = 303.91;
+			var amount = 0;
+			// Write a program to calculate the total price of your phone purchase.
+			var amount = PHONE_PRICE + (TAX_RATE*PHONE_PRICE) + ACCESSORY_PRICE;
+			console.log(amount);
+			// console.log(price);
+
+			// You will keep purchasing phones (hint: loop!) until you run out of bank balance.
+			for (amount; ((amount+ACCESSORY_PRICE) < bank_balance); (amount++)) {
+				console.log(amount+ACCESSORY_PRICE);
+				console.log("You may buy new phone");
+			}
+				console.log("Low bank balance");
+
+			// You'll also buy accessories for each phone as long as your purchase amount is below your spending threshold.
+			while (amount < SPENDING_THRESHOLD) 
+			{
+				// console.log(amount);
+				console.log("amount:" + amount + ACCESSORY_PRICE);
+				console.log("You may buy new phone");
+				amount++;
+			}
+				console.log("You ran out of spending threshold");
+
+			// Write a function called calculateTax which takes an argument 'amount' and calculates the tax you need to pay.
+			var taxPay;
+			// var amount = PHONE_PRICE + (TAX_RATE*PHONE_PRICE) + ACCESSORY_PRICE;
+			function calculateTax(amount) {
+				taxPay = Number((amount*TAX_RATE)/100);
+				return taxPay;
+			}
+			calculateTax();
+			console.log(taxPay);
+
+			// Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
+
+			// for (var i = 1; i < 100; i++) {
+
+			// 	if (i%3==0 && i%5==0) {
+			// 		console.log("FizzBuzz");
+			// 	}
+			// 	else if (i%5==0) {
+			// 		console.log("Buzz");
+			// 	}
+			// 	else if (i%3==0) {
+			// 		console.log("Fizz");	
+			// 	}
+			// 	else console.log(i);
+			// }
+		</script>
+	</body>
+</html>

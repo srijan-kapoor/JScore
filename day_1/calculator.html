@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic Calculator</title>
+		<link rel="stylesheet" href="assets/stylesheet/style.css">
+	</head>
+	<body>
+		<script type="text/javascript">
+			var num1= Number(prompt("Enter num1")); 
+			var num2= Number(prompt("Enter num2")); 
+			var output= Number;
+			var operation= prompt("Choose the operation you would like to perform: + - * /");
+
+				if (operation=="+")
+				{
+					var output= num1+num2;
+				}		
+				else if (operation=="-")
+				{
+					var output= num1-num2;
+				}
+				else if (operation=="*")
+				{
+					var	output= num1*num2;
+				}
+				else if (operation=="/")
+				{
+					var output= num1/num2;
+				}
+					alert(output);
+		</script>
+	</body>
+</html>
