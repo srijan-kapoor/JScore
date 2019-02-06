@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Task 1</title>
+		<link rel="stylesheet" href="assets/stylesheet/style.css">
+	</head>
+	<body>
+		<script type="text/javascript">
+			// Get two values from the user ‘password’ and ‘confirm password’  using the prompt box and display a message “Password validated” if both the values match else display the message “Password do not match”
+
+			// var password = prompt("Enter your Password");
+			// var confirmPassword = prompt("Re-enter your “Password");
+
+			// if (password==confirmPassword) {
+			// 	console.log("Password Validated");
+			// }
+			// else
+			// 	console.log("Password do not match");
+
+			// Find the output of the following
+			// Logical AND operation
+			// true  && true; true
+			// true  && false; false	
+			// false && true; false
+			// false && false; false
+
+			// Logical OR operation
+			// true  || true; true
+			// true  || false; true
+			// false || true; true
+			// false || false; false
+
+			// "foo" && "bar"; bar
+			// "bar" && "foo"; foo
+			// "foo" && ""; ""
+			// ""    && "foo"; ""
+
+			// "foo" || "bar"; foo
+			// "bar" || "foo"; bar
+			// "foo" || "";    foo
+			// ""    || "foo";  foo 
+
+			let isGuestOneVeg = false;
+			let isGuestTwoVeg = false;
+
+		// If both are veg "Only offer up vegan dishes."
+		// At least one veg  "Make sure to offer up some vegan options."
+		// Else, "Offer up anything on the menu"
+		// if (isGuestOneVeg && isGuestTwoVeg) {
+		// 	console.log("Only offer up vegan dishes.");
+		// }
+		// else if (isGuestOneVeg || isGuestTwoVeg) {
+		// 	console.log("Make sure to offer up some vegan options.");
+		// }
+		// else console.log("Offer up anything on the menu");
+
+		// 1. If temperature is less then 32 alert "It is freezing outside"
+		// 2. If the temperature is greater then 110 alert "It is hot outside"
+		// 3. else 'Go for it. It is pretty nice out'
+
+		// let temp = 4;
+
+		// var newTemp = prompt("Enter Temperature");
+		// if (newTemp<32) {
+		// 	console.log("It is freezing outside");
+		// }
+		// else if (newTemp > 110) {
+		// 	console.log("It is hot outside");
+		// } 
+		// else console.log("Go for it. It is pretty nice out");
+
+		// Output of this alert( alert(1) || 2 || alert(3) ); True
+
+		// Create a function which takes two input and (a,b) and display the sum, sub, multiplication, division of those two numbers.
+		// 	var x = Number(prompt("enter first number"));
+		// 	var y = Number(prompt("enter second number"));
+
+		//   function input(a,b) {
+		// 	var sum = a+b;
+		// 	var sub = a-b;
+		// 	var mul = a*b;
+		// 	var div = a/b;
+		// 	console.log(sum, sub, mul, div);
+		// 	// alert(`Sum is: ${sum}, Sub is ${sub} ` + mul + ' asdasd')
+
+		// }
+		// 	input(x,y);
+
+		// Function to display a number if user enters negative number
+		// var p = Number(prompt("enter a number to check if it's a positive number"));
+		// function check(q) {
+		// 	if (q>0) {
+		// 		console.log("Positive Number");
+		// 	}
+		// 	else if (q<0) {
+		// 		console.log(-1);
+		// 	}
+		// 	else console.log("you entered zero");
+		// }
+		// check(p);
+
+		// Function to check whether an integer entered by the user is odd or even
+		// var z = Number(prompt("enter a number to check odd or even"));
+		// function oddEven(w) {
+		// 	if (w%2==0) {
+		// 		console.log("even number");
+		// 	}
+		// 	else
+		// 		console.log("odd number");
+		// }
+		// oddEven(z);
+
+		// Function to take two input and show the relation using =, > or < i.e (21,45) 21 < 45, (23,12) 23 > 12
+		// var m = Number(prompt("enter first number"));
+		// var n = Number(prompt("enter second number"));
+
+		// // how to take multiple inputs in one go?
+
+		// function relation(r,s) {
+		// 	if (r>s) {
+		// 		console.log("Greater num is:", r);
+		// 	}
+		// 	else if (r<s) {
+		// 		console.log("Greater num is:", s);
+		// 	}
+		// 	else console.log("numbers are equal");
+		// }
+		// relation(m,n);
+
+		// Funnction to Check Whether a Character is Vowel or Consonant
+
+		// var k = prompt("enter a character");
+
+		// function vowelConso(l) {
+		// 	if (l==="a" || l=== "e" || l==="i" || l=== "o" || l==="u") {
+		// 		console.log("you entered a vowel");
+		// 	}
+		// 	else if (l===" ") {
+		// 		console.log("not a valid character");
+		// 	} 
+		// 	else
+		// 		console.log("you entered a consonant");		
+		// 	}
+		// 	vowelConso(k);
+
+		// Output: var x = 10 + "1"; console.log(x); typeof x;
+		// console.log(x) returns 101 - concatenation of strings, typeof x returns string
+
+		// Function to generate Multiplication Table of a given number 
+		// var numb = Number(prompt("enter a number to generate its multiplication table"));
+		// for (i=1; i<=10; i++) {
+		// 	console.log(numb + "*" + i + "="+numb*i);
+		// }
+
+		//Switch
+		// You are given a variable, . Your task is to print:
+		// - ONE, if num is equal to 1.
+		// - TWO, if num is equal to 2.
+		// - THREE, if num is equal to 3.
+		// - FOUR, if num is equal to 4.
+		// - FIVE, if num is equal to 5.
+		// - SIX, if num is equal to 6.
+		// - SEVEN, if num is equal to 7.
+		// - EIGHT, if num is equal to 8.
+		// - NINE, if num is equal to 9.
+		// - PLEASE TRY AGAIN, if  is none of the above.
+
+		// var row = prompt("enter a number between 1-9");
+
+		// switch (row) {
+		// 	case '1': 
+		// 		alert("ONE");
+		// 		break;
+		// 	case '2':
+		// 		alert("TWO");
+		// 		break;
+		// 	case '3':
+		// 		alert("THREE");
+		// 		break;
+		// 	case '4':
+		// 		alert("FOUR");
+		// 		break;
+		// 	case '5':
+		// 		alert("FIVE");
+		// 		break;
+		// 	case '6':
+		// 		alert("SIX");
+		// 		break;
+		// 	case '7':
+		// 		alert("SEVEN");
+		// 		break;
+		// 	case '8':
+		// 		alert("EIGHT");
+		// 		break;
+		// 	case '9':
+		// 		alert("NINE");
+		// 		break;
+		// 	default:
+		// 		alert("PLEASE TRY AGAIN");
+		// }
+
+		// You are given a variable marks. Your task is to print:
+		// - AA if marks is greater than 90.
+		// - AB if marks is greater than 80 and less than or equal to 90
+		// - BB if marks is greater than 70 and less than or equal to 80
+		// - BC if marks is greater than 60 and less than or equal to 70
+		// - CC if marks is greater than 50 and less than or equal to 60
+		// - CD if marks is greater than 40 and less than or equal to 50
+		// - DD if marks is greater than 30 and less than or equal to 40
+		// - FF if marks is less than or equal to 30
+
+		// var marks = prompt("enter a number less than 100");
+
+		// switch (marks) {
+		// 	case (marks>90):
+		// 		alert("AA");
+		// 		break;
+		// 	case (marks>80 && marks<=90):
+		// 		alert("AB");
+		// 		break;
+		// 	case (marks>70 && marks<=80):
+		// 		alert("BB");
+		// 		break;
+		// 	case (marks>60 && marks<=70):
+		// 		alert("BC");
+		// 		break;
+		// 	case (marks>50 && marks<=60):
+		// 		alert("CC");
+		// 		break;
+		// 	case (marks>40 && marks<=50):
+		// 		alert("CD");
+		// 		break;
+		// 	case (marks>30 && marks<=40):
+		// 		alert("DD");
+		// 		break;
+		// 	case (marks<=30):
+		// 		alert("FF");
+		// 		break;
+		// 	default:
+		// 		alert('Work hard');
+		// }
+
+		// if (marks>90) {
+		// 	alert("AA");
+		// }
+		// if (marks>80 && marks<=90) {
+		// 	alert("AB");
+		// }
+		// if (marks>70 && marks<=80) {
+		// 	alert("BB");
+		// }
+		// if (marks>60 && marks<=70) {
+		// 	alert("BC");
+		// }
+		// if (marks>50 && marks<=60) {
+		// 	alert("CC");
+		// }
+		// if (marks>40 && marks<=50) {
+		// 	alert("CD");
+		// }
+		// if (marks>30 && marks<=40) {
+		// 	alert("DD");
+		// }
+		// if (marks<=30) {
+		// 	alert("FF");
+		// }
+
+		// Function to calculate the Factorial of a Number
+		// var fact= prompt("Enter a number to see its factorial value:")
+
+		// function factorial(n) {
+  // 		if (n==0) 
+  //   	return 1;
+  // 		else 
+  // 		return factorial(n-1)*n;
+		// } 
+		// console.log(factorial(fact));
+
+		//Write a function named helloWorld that:
+		// takes 1 argument, a language code (e.g. "es", "de", "en")
+		// returns "Hello, World" for the given language, for at least 3 languages. It should default to returning English.
+		// Call that function for each of the supported languages and log the result to make sure it works.
+
+		// var hello = prompt("Choose a language code: es, de, en");
+		// function helloWorld(s) {
+		// 	switch (s) {
+		// 		case "es":
+		// 			alert("Hola Mundo");
+		// 			break;
+		// 		case "de":
+		// 			alert("Hallo Wereld");
+		// 			break;
+		// 		default:
+		// 			alert("Hello World");
+		// 	}
+		// }
+		// 	console.log(helloWorld(hello));
+
+		// Write a function named assignGrade that:
+		// takes 1 argument, a number score.
+		// returns a grade for the score, either "A", "B", "C", "D", or "F".
+		// Call that function for a few different scores and log the result to make sure it works.
+		// var grade= prompt("Enter your score");
+		// function assignGrade(g) {
+		// 	if (g>90) 
+		// 		return "A";
+		// 	else if (g>80 && g<=90) 
+		// 		return "B";
+		// 	else if (g>70 && g<=80) 
+		// 		return "C";
+		// 	else if (g>60 && g<=70) 
+		// 		return "D";
+		// 	else if (g<60) 
+		// 		return "F";
+		// 	}
+		// 	console.log(assignGrade(grade));
+
+		// Loops
+		// For loop
+		// Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even").
+
+		// Loops
+		// For loop
+		// Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even").
+
+		// Loops
+		// For loop
+		// Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even").
+
+		// for (i=0; i<=20; i++) {
+		// 		console.log(i);
+		// 	if (i%2==0) {
+		// 		console.log("current number is even");
+		// 	}
+		// 	else  
+		// 		console.log("number is odd");
+		// }
+
+		// Write a for loop that will iterate from 0 to 10. For each iteration of the for loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
+		// for (j=0; j<=10; j++) {
+		// 	console.log(j*9);
+		// }
+
+		// Use a nested for loop to show the tables for every multiplier from 1 to 10 (100 results total).
+		// for (k=0; k<=10; k++) {
+		// 	for (var t=1; t<k; t++) {
+		// 		console.log(k*t);
+		// 	}	
+		// }
+
+		// Each new term in the Fibonacci sequence is generated by adding the previous two terms. By starting with 1 and 2, the first 10 terms will be:
+		// 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+		// By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
+		function fibonacci(n) {
+			if (n<=1) {
+				return n;
+			}
+			else
+				return fibonacci(n-1) + fibonacci(n-2);
+		}
+		console.log(fibonacci(10));
+
+		// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+		// Find the sum of all the multiples of 3 or 5 below 1000.
+
+		// function multiple(number) {
+		// 	var sum = 0;
+		// 	for (i=0; i< 1000; i++) {
+		// 		if (i % 3 === 0 || i % 5 === 0) {
+		// 			sum = sum+i;
+		// 		}
+		// 	}
+		// 	return sum;
+		// }
+		// console.log(multiple(3));
+
+		</script>
+	</body>
+</html>
