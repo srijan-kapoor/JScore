@@ -7,18 +7,18 @@
 	<body>
 	<script>
 	
-	Write a function named calculateDogAge that:
-	takes 1 argument: your puppy's age.
-	calculates your dog's age based on the conversion rate of 1 human year to 7 dog years.
-	outputs the result to the screen like so: "Your doggie is NN years old in dog years!"
-	Add an additional argument to the function that takes the conversion rate of human to dog years.
+	// Write a function named calculateDogAge that:
+	// takes 1 argument: your puppy's age.
+	// calculates your dog's age based on the conversion rate of 1 human year to 7 dog years.
+	// outputs the result to the screen like so: "Your doggie is NN years old in dog years!"
+	// Add an additional argument to the function that takes the conversion rate of human to dog years.
 
-	// function calculateDogAge(yourAge) {
-	// 	alert("Your dog's age will be calculated with conversation rate: 1 human year equals 7 dog years")
-	// 	yourAge*= 7;
-	// 	return yourAge;
-	// }
-	// console.log("Your dog is " + calculateDogAge(3) + "years old in dog years");
+	function calculateDogAge(puppyAge) {
+		alert("Your dog's age will be calculated with conversation rate: 1 human year equals 7 dog years")
+		puppyAge*= 7;
+		return puppyAge;
+	}
+	console.log("Your dog is " + calculateDogAge(3) + "years old in human years");
 
  //  // Write a function named calculateSupply that:
 	// // takes 2 arguments: age, amount per day.
@@ -131,17 +131,17 @@
 
 	// // Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
 
-	// var numberOfWords = prompt("Enter a string to count its words");
-	// function countWords(x) {
-	// 	var count =0;
-	// 	var string = str.toString();
-	// 	for (var i=0; i<string.length; i++) {
-	// 		if (string.charAt(i) === " ") {
-	// 			count+=1; }
-	// 	}
-	// 	return count;
-	// }
-	// console.log(countWords(numberOfWords));
+	var numberOfWords = prompt("Enter a string to count its words");
+	function countWords(x) {
+		var count =1;
+		var string = numberOfWords.toString();
+		for (var i=0; i<string.length; i++) {
+			if (string.charAt(i) === " ") {
+				count+=1; }
+		}
+		return count;
+	}
+	console.log(countWords(numberOfWords));
 
 	// // Show the following output using one loop.
 	// // 1, 2, 3, 4, 5

@@ -378,6 +378,61 @@
 		 var isNumberEven3 = n => (n%2==0) ? true: false;
 		 console.log(isNumberEven3(8));
 
+		 /**
+		 * Returns a letter grade.
+		 * "A": 90-100%
+		 * "B": 80-89%
+		 * "C": 70-79%
+		 * "D": 60-69%
+		 * "F": 0-59%
+		 * @param {number} score
+		 * @param {number} total maximum possible score
+		 * @return {string} the score represented as a letter grade
+		 */
+
+		 function Grade(score) {
+		 	if (score>=90 && score<100) {
+		 		console.log("A"); }
+		 	if (score<90 && score>=80) {
+		 		console.log("B") }
+		 	if (score<80 && score>=70) {
+		 		console.log("C"); }
+		 	if (score<70 && score>=60) {
+		 		console.log("D"); }
+		 	if (score<60) {
+		 		console.log("E"); }
+		 	}
+		 	Grade(67);
+
+		 	var Grade1 = function(score) {
+		 	if (score>=90 && score<100) {
+		 		console.log("A"); }
+		 	if (score<90 && score>=80) {
+		 		console.log("B") }
+		 	if (score<80 && score>=70) {
+		 		console.log("C"); }
+		 	if (score<70 && score>=60) {
+		 		console.log("D"); }
+		 	if (score<60) {
+		 		console.log("E"); }
+		 	};
+		 	Grade(92);
+
+		 	// Arrow function 
+		 	var Grade2 = (score) => {
+		 	if (score>=90 && score<100) {
+		 		console.log("A"); }
+		 	if (score<90 && score>=80) {
+		 		console.log("B") }
+		 	if (score<80 && score>=70) {
+		 		console.log("C"); }
+		 	if (score<70 && score>=60) {
+		 		console.log("D"); }
+		 	if (score<60) {
+		 		console.log("E"); }
+		 	};
+		 	Grade2(77);
+		 
 
 		</script>
 	</body>
