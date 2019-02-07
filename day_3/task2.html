@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Practice 1</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+	<script>
+	
+	Write a function named calculateDogAge that:
+	takes 1 argument: your puppy's age.
+	calculates your dog's age based on the conversion rate of 1 human year to 7 dog years.
+	outputs the result to the screen like so: "Your doggie is NN years old in dog years!"
+	Add an additional argument to the function that takes the conversion rate of human to dog years.
+
+	// function calculateDogAge(yourAge) {
+	// 	alert("Your dog's age will be calculated with conversation rate: 1 human year equals 7 dog years")
+	// 	yourAge*= 7;
+	// 	return yourAge;
+	// }
+	// console.log("Your dog is " + calculateDogAge(3) + "years old in dog years");
+
+ //  // Write a function named calculateSupply that:
+	// // takes 2 arguments: age, amount per day.
+	// // calculates the amount consumed for rest of the life (based on a constant max age).
+	// // outputs the result to the screen like so: "You will need NN to last you until the ripe old age of X"
+	// // Accept floating point values for amount per day, and round the result to a round number.
+
+	// function calculateSupply(age, amountPerday) {
+	// 	if (age<=10) {
+	// 		return "You will need " + amountPerday*4 + " amount to last you until the ripe old age of " + age*10;
+	// 	}
+	// 	if (age>10 && age<=30) {
+	// 		return "You will need " + amountPerday*3 + " amount to last you until the ripe old age of " + age*5;
+	// 	}
+	// 	if (age>30 && age<=60) {
+	// 		return "You will need " + amountPerday*2 + "to last you until the ripe old age of " + age*2;
+	// 	}
+	// 	else 
+	// 		return "You will need " + amountPerday*1.5 + "to last you until the ripe old age of " + age;
+	// }
+	// console.log(calculateSupply(11,21));
+
+	// // Create a function called celsiusToFahrenheit:
+	// // Store a celsius temperature into a variable.
+	// // Convert it to fahrenheit and output "NN°C is NN°F".
+
+	// function celsiusToFahrenheit(temp) {
+	// 	var celsius = (temp+9/5)+32;
+	// 	return "Temperature in fahrenheit is " + celsius +"°F";
+	// }
+	// console.log(celsiusToFahrenheit(32));
+
+	// // Create a function called fahrenheitToCelsius:
+	// // Now store a fahrenheit temperature into a variable.
+	// // Convert it to celsius and output "NN°F is NN°C."
+
+	// function fahrenheitToCelsius(temp) {
+	// 	var fahrenheit = (temp-32)*5/9;
+	// 	return "Temperature in Celsius is " + fahrenheit + "°C";
+	// }
+	// console.log(fahrenheitToCelsius(54));
+
+	// //1. The following function returns true if the parameter age is greater than 18.
+	// // Otherwise it asks for a confirmation and returns its result:
+
+	// // 	function checkAge(age) {
+	// //   if (age > 18) {
+	// //     return true;
+	// //   // } else {
+	// //   //   // ...
+	// //     return confirm("Did parents allow you?");
+	// //   }
+	// // }
+	// // console.log(checkAge(10));
+	// // Will the function work differently if else is removed?
+	// // Function will still return the same result even if we remove else statement
+	// // Is there any difference in the behavior of these two variants?
+	// // No difference in behaviour
+
+	// // 2. The following function returns true if the parameter age is greater than 18.
+	// // Otherwise it asks for a confirmation and returns its result.
+
+	// // function checkAge(age) {
+	// //   if (age > 18) {
+	// //     return true;
+	// //   } else {
+	// //     return confirm("Do you have your parents permission to access this page?");
+	// //   }
+	// // }
+	// // Rewrite it, to perform the same, but without if, in a single line.
+	// // Make two variants of checkAge:
+	// // Using a question mark operator ?
+	// // Using OR ||
+
+	// var checkAge = (x) => (x>18) ? true : false;
+	// var checkAge2 = (x) => { if (x>18); return true; };
+	// console.log(checkAge(17));
+	// console.log(checkAge2(21));
+
+	// // Write a function pow(x,n) that returns x in power n. Or, in other words, multiplies x by itself n times and returns the result.
+	// // pow(3, 2) = 3 * 3 = 9
+	// // pow(3, 3) = 3 * 3 * 3 = 27
+	// // pow(1, 100) = 1 * 1 * ...* 1 = 1
+	// // Use prompt to take values for x and n, and then shows the result of pow(x,n) using alert.
+	// // In this task the function should support only natural values of n: integers up from 1.
+	// var base =prompt("Enter value for x");
+	// var exponent = prompt("Enter value for n");
+	// var pow = (x,n) => {
+	// 	var value = 1;
+	// 	for (var i=0; i<n; i++) {
+	// 		value *= x
+	// 	}
+	// 	return value;
+	// } 
+	// console.log(pow(base, exponent));
+
+	// // Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.
+
+	// var str = prompt("Enter a string to count its vowels");
+	// function countVowels(x) {
+	// 	var count = 0;
+	// 	var string = str.toString();
+	// 	for (var i=0; i<string.length; i++) {
+	// 		if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+ //      count += 1; }
+	// 	}
+	// 	return count;
+	// }
+	// console.log(countVowels(str));
+
+	// // Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
+
+	// var numberOfWords = prompt("Enter a string to count its words");
+	// function countWords(x) {
+	// 	var count =0;
+	// 	var string = str.toString();
+	// 	for (var i=0; i<string.length; i++) {
+	// 		if (string.charAt(i) === " ") {
+	// 			count+=1; }
+	// 	}
+	// 	return count;
+	// }
+	// console.log(countWords(numberOfWords));
+
+	// // Show the following output using one loop.
+	// // 1, 2, 3, 4, 5
+	// // 6, 7, 8, 9, 10
+
+	// for (i=0; i<=10; i++) {
+	// 	console.log(i);
+	// }
+
+	// Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
+
+	// var askNum = +prompt("Enter a number");
+	// var pick = prompt("Would you like to add or multiply");
+
+	// if(pick === "add") {
+	// 	console.log(sum(askNum));
+	// }
+	// if(pick=="multiply") {
+	// 	console.log(product(askNum));
+	// }
+	// function sum(n) {
+	// 	total =1;
+	// 	for (i=0; i<=n; i++) {
+	// 		var total = (n*(n+1))/2;
+	// 		return total;
+	// 	}	
+	// }
+	// function product(m) {
+	// 	product =1;
+	// 	for (i=1; i<=m; i++) {
+	// 		var product = product*i;
+	// 	} return product;
+	// }
+
+	// Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
+
+	// Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
+
+	// var num4 = +prompt("Enter a number");
+	// function multiples(number) {
+ //  let sum = 0;
+ //  for (let i = 0; i <= number; i++) {
+
+ //    if (i % 5 == 0 || i % 7 == 0) {
+ //      sum += i;
+ //    }
+ //  }
+ //  return sum;
+	// }
+	// console.log(multiples(num4));
+
+	// Write a program that takes a number under (25) and prints the multiplication table for the number.
+
+// 	var numb = Number(prompt("enter a number under 25 to generate its multiplication table"));
+// 	for (i=1; i<=10; i++) {
+// 	console.log(numb + "*" + i + "="+numb*i);
+// }
+
+		</script>
+
+	</body>
+</html>

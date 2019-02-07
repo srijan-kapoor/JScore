@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Functions</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<script>
+			
+			// Practice different way of writing function
+			//  i.e
+			// 1. Function Decleration
+			// 2. Function Expression
+			// 3. Arrow Function Without Curly Braces
+			// 4. Arrow Function With Curly Braces
+
+			/**
+			 * Adds one to a given number.
+			 * @param {number} n
+			 * @return {number}
+			 */
+
+			// Function Declaration 
+			function addOne(number) {
+				number+=1;
+				return number;
+			}
+				console.log(addOne(2));
+
+			// function expression 
+			let addOne1 = function(num) {
+				num+=1;
+				return num;
+			};
+				console.log(addOne1(2));
+
+			// Arrow function
+			var addOne2 = (num2) => { return num2+=1; };
+			console.log(addOne2(2));
+
+			var addOne3 = num3 => num3+=1;
+			console.log(addOne3(2));
+
+			/**
+			 * Subtracts one from a given number.
+			 * @param {number} n
+			 * @return {number}
+			 */
+
+			 // Function Declaration 
+			function subOne(number) {
+				number-=1;
+				return number;
+			}
+				console.log(subOne(5));
+
+			// function expression 
+			let subOne1 = function(num) {
+				num-=1;
+				return num;
+			};
+				console.log(subOne1(5));
+
+			// Arrow function
+			var subOne2 = (num2) => { return num2-=1; };
+			console.log(subOne2(5));
+
+			var subOne3 = num3 => num3-=1;
+			console.log(subOne3(5));
+
+			/**
+		 	* Adds two numbers.
+		 	* @param {number} x
+		 	* @param {number} y
+		 	* @return {number} the sum
+		 	*/
+
+		 	// Function Declaration
+		 	function addNumbers(x,y) {
+		 		var sum= x+y;
+		 		return sum;
+		 	}
+		 	console.log(addNumbers(3,4));
+
+		 	let addNumbers1 = function(x,y) {
+		 		return x+y;
+		 	};
+		 		console.log(addNumbers(3,4));
+
+		 	// Arrow function 
+		 	var addNumbers2 = (x,y) => { var sum=x+y; return sum; };
+		 	console.log(addNumbers2(3,4));
+
+		 	var addNumbers3 = (x,y) => x+y;
+		 	console.log(addNumbers3(3,4));
+
+		 	/**
+		 * Subtracts the second number from the first.
+		 * @param {number} x
+		 * @param {number} y
+		 * @return {number} the difference
+		 */
+
+		 // Function declartion
+		 function subFirstNumber(x,y) {
+		 	var sub= x-y;
+		 	return sub;
+		 }
+		 	console.log(subFirstNumber(12,3));
+
+		 let subFirstNumber1 = function(x,y) {
+		 	return x-y;
+		 };
+		  console.log(subFirstNumber1(12,3));
+
+		  // Arrow function 
+		  var subFirstNumber2 = (x,y) => { var sub= x-y; return sub;};
+		  console.log(subFirstNumber2(12,3));
+
+		  var subFirstNumber3 = (x,y) => x-y;
+		  console.log(subFirstNumber3(12,3));
+
+		  /**
+		 * Multiplies two numbers.
+		 * @param {number} x
+		 * @param {number} y
+		 * @return {number} the product
+		 */
+
+		 // function declaration
+		 function multiplyTwoNum(x,y) {
+		 	var mul = x*y;
+		 	return mul;
+		 }
+		 console.log(multiplyTwoNum(4,3));
+
+		 // function expression
+		 var multiplyTwoNum1 = function(x,y) {
+		 	return x*y;
+		 };
+		 console.log(multiplyTwoNum1(4,3));
+
+		 // Arrow function
+		 var multiplyTwoNum2 = (x,y) => { var mul= x*y; return mul;};
+		 console.log(multiplyTwoNum2(4,3));
+
+		 var multiplyTwoNum3 = (x,y) => x*y;
+		 console.log(multiplyTwoNum3(4,3));
+
+				 /**
+		 * Divides the first number by the second.
+		 * @param {number} x
+		 * @param {number} y
+		 * @return {number} the quotient
+		 */
+
+		 function divideOneByTwo(x,y) {
+		 	var div= x/y;
+		 	return div;
+		 }
+		 console.log(divideOneByTwo(30,2));
+
+		 var divideOneByTwo1 = function(x,y) {
+		 	return x/y;
+		 };
+		 console.log(divideOneByTwo1(30,2));
+
+		 // Arrow function
+		 var divideOneByTwo2 =(x,y) => { var div= x/y; return div;};
+		 console.log(divideOneByTwo2(30,2));
+
+		 var divideOneByTwo3 = (x,y) => x/y;
+		 console.log(divideOneByTwo3(30,2));
+
+
+		/**
+		 * Multiplies a number by itself.
+		 * @param {number} x, number to be squared
+		 * @return {number} squared
+		 */
+
+		 // function declaration 
+		 function square(x) {
+		 	var sqr= x*x;
+		 	return sqr;
+		 }
+		 console.log(square(5));
+
+		 var square1 = function(x) {
+		 	return x*x;
+		 };
+		 console.log(square1(5));
+
+		 // Arrow function
+		 var square2 = (x) => {return x*x;};
+		 console.log(square2(5));
+
+		 var square3 = x => x*x;
+		 console.log(square3(5));
+
+		/**
+		 * Performs a mathematical operation on two numbers.
+		 * Also prints out the equation: (i.e.) "1 + 5 = 6" or "8 / 2 = 4".
+		 * @param {string} operation "add", "subtract", "multiply", or "divide"
+		 * @param {number} x
+		 * @param {number} y
+		 * @return {number} the result
+		 */
+
+		 function mathOperation(x,y) {
+		 	var add = x+y;
+		 	var subtract= x-y;
+		 	var multiply= x*y;
+		 	var divide= x/y;
+
+		 	var result= (add, subtract, multiply, divide);
+		 	return {add, subtract, multiply, divide};
+		 }
+		 console.log(mathOperation(20,10));
+
+		 var mathOperation1 = function(x,y) {
+		 	var add = x+y;
+		 	var subtract= x-y;
+		 	var multiply= x*y;
+		 	var divide= x/y;
+
+		 	return {add, subtract, multiply, divide};
+		 };
+		 console.log(mathOperation1(30,20));
+
+		 // Arrow function
+		 var mathOperation2 = (x,y) => { 
+		 	var add = x+y;
+		 	var subtract= x-y;
+		 	var multiply= x*y;
+		 	var divide= x/y;
+		 	result = add, subtract, multiply, divide;
+		 	return {add, subtract, multiply, divide};
+		 };
+		 console.log(mathOperation2(25,20));
+
+		 // var mathOperation3 = (x,y) => {}
+
+		 /**
+		 * Returns true if `a` is greater than `b`.
+		 * @param {number} a
+		 * @param {number} b
+		 * @return {boolean} `a` is larger than `b`
+		 */
+
+		 function aGreaterb(a,b) {
+		 	if (a>b) {
+		 		return true;
+		 	}
+		 }
+		 console.log(aGreaterb(32,17));
+
+		 // function expression
+		 var aGreaterb1 = function(a,b) {
+		 	if (a>b) {
+		 		return true;
+		 	}
+		 };
+		 console.log(aGreaterb1(29,17));
+
+		 //  Arrow function 
+		 var aGreaterb2 = (a,b) => { if (a>b){
+		 	return true;
+		 } else return false;
+		}
+		 console.log(aGreaterb2(12,7));
+
+		 var aGreaterb3 = (a,b) => (a>b) ? true: false;
+		 console.log(aGreaterb3(2,1));
+
+		 /**
+		 * Returns true if `a` is less than `b`.
+		 * @param {number} a
+		 * @param {number} b
+		 * @return {boolean} `a` is smaller than `b`
+		 */
+
+		 function aLessThanB(a,b) {
+		 	if (a<b) {
+		 		return true;
+		 	}
+		 }
+		 	console.log(aLessThanB(2,3));
+
+		 	var aLessB =function (a,b) {
+		 	if (a<b) {
+		 		return true;
+		 		}
+		 	};
+		 	console.log(aLessB(7,11));
+
+		 	// arrow function
+		 	var aLessThanB2 = (a,b) => { if (a<b); return true; };
+		 	console.log(aLessThanB2(3,6));
+
+		 	var aLessThanB3 = (a,b) => (a<b) ? true: false; 
+		 	console.log(aLessThanB3(43,343));
+		 	// can we pass empty string with ternary operator?
+
+		 	/**
+		 * Returns true if `a` and `b` are equal.
+		 * @param {number} a
+		 * @param {number} b
+		 * @return {boolean} the numbers are equal
+		 */
+
+		 function equalNumbers(a,b) {
+		 	if (a==b) {
+		 		return true + " the numbers are equal";
+		 	}
+		 }console.log(equalNumbers(4,4));
+
+		 var equalNumbers2 = function(a,b) {
+		 	if (a==b) {
+		 		return true;
+		 	 }
+		  }; 
+		  console.log(equalNumbers2(8,8));
+
+		 // Arrow function 
+		 var equalNumbers3 = (a,b) => { if (a==b); return true;};
+		 console.log(equalNumbers3(7,7));
+
+		 var equalNumbers4 = (a,b) => (a==b) ? true: false;
+		 console.log(equalNumbers4(21,21));
+
+		 /**
+		 * Joins two strings with a space.
+		 * @param {string} word1
+		 * @param {string} word2
+		 * @return {string} joined the words joined with a space
+		 */
+
+		 function joinStrings(word1, word2) {
+		 	var joined = word1 + word2;
+		 	return joined + " joined the words with a space";
+		 }
+		 console.log(joinStrings("hello ", "java"));
+
+		 var joinStrings1 = function(word1, word2) {
+		 	var joined= word1 + word2;
+		 	return joined;
+		 };
+		 console.log(joinStrings1("Learning ", "script"));
+
+		 var joinStrings2 = (word1,word2) => { joined= word1+word2; return joined };
+		 console.log(joinStrings2("add ", "numbers"));
+
+		 var joinStrings3 = (word1,word2) => word1+word2;
+		 console.log(joinStrings3("try " + "again"));
+
+				 /**
+		 * Returns true if `n` is even.
+		 * @param {number} n
+		 * @return {boolean} the number is even
+		 */
+
+		 function isNumberEven(n) {
+		 	if (n%2==0)
+		 		return true +" the number is even";
+		 }
+		 console.log(isNumberEven(4));
+
+		 var isNumberEven1 = function(n) {
+		 	if (n%2==0)
+		 		return true +" the number is even";
+		 };
+		 console.log(isNumberEven1(6));
+
+		 var isNumberEven2 = (n) => {if (n%2==0); return true;};
+		 console.log(isNumberEven2(10));
+
+		 var isNumberEven3 = n => (n%2==0) ? true: false;
+		 console.log(isNumberEven3(8));
+
+
+		</script>
+	</body>
+</html>
