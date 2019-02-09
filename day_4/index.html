@@ -57,7 +57,74 @@
 		myPenguin.Fly()
 		"I can Fly"
 
+		//12. Write a for ... in loop to print each key to the console. (Hint: See this page for an example of this special type of loop.)
+		for (let key in myPenguin) {
+			console.log(key);
+		}
 
+		//13. Write another for ... in loop to print the value of each key to the console. (Hint: You'll need to use bracket notation to access the values this way, instead of dot notation!)
+		for (let key in myPenguin) {
+			console.log(myPenguin[key]);
+		}
+		
+		// Exercise 2
+		// 14.
+		// Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).
+		// On separate lines (one console.log statement for each), log the recipe information so it looks like:
+		// Mole
+		// Serves: 2
+		// Ingredients:
+		// cinnamon
+		// cumin
+		// cocoa
+
+		var myRecipe = {
+			title: "pancake",
+			servings: +2,
+			ingredients: ["eggs", "flour", "sugar", "milk", "baking powder"],
+		};
+
+		console.log("title: " + myRecipe.title);
+		console.log("servings " + myRecipe.servings);
+		console.log("ingredients " + myRecipe.ingredients);
+
+		// 15.
+		// Keep track of which books you read and which books you want to read!
+
+		// Create an array of objects, where each object describes a book and has properties for the title (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet).
+		// Iterate through the array of books. For each book, log the book title and book author like so: "The Hobbit by J.R.R. Tolkien".
+		// Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
+
+		var objectBook = {
+			title: "The Hobbit",
+			author: "J.R.R. Tolkien",
+			alreadyRead: true,
+		};
+
+		var objectBook2 = {
+			title: "The Lord of the Rings",
+			author: "J.R.R. Tolkien",
+			alreadyRead: false,
+		};
+
+		var objectBook3 = {
+			title: "A Tale of Two Cities",
+			author: "Charles Dickens",
+			alreadyRead: true,
+		};
+
+		var books = [objectBook, objectBook2, objectBook3];
+
+		for (i=0; i<books.length; i++) {
+			console.log(books[i].title + " by " + books[i].author);
+		}
+
+		for (i=0; i<books.length; i++) {
+			if (books[i].alreadyRead== true) {
+				console.log("You already read " + books[i].title + " by " + books[i].author);
+			} else
+				console.log("You still need to read " + books[i].title + " by " + books[i].author)
+		}
 
 		</script>
 

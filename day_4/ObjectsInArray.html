@@ -36,6 +36,7 @@
 		};
 		var myPenguin = {
 			name: "Misha",
+			canFly: true,
 			Origin: "Death and the Penguin",
 			Author: "Andrey Kurkov",
 			sayHello: function () {
@@ -78,16 +79,22 @@
 		};
 
 		// 11.Write a for loop to iterate through every penguin in the array, and add a new property to each penguin called numberOfFeet with the value 2
+		// for (i=0; i<=penguins.length-1; i++) {
+		// 	penguins.push({
+		// 		numberOfFeet: "2",
+		// 	});
+		// }; 
+
 		for (i=0; i<=penguins.length-1; i++) {
-			penguins.push({
-				numberOfFeet: "2",
-			});
+			penguins.push(['numberOfFeet'] = "2");
 		};
 
+		// 12.Write another for loop to iterate through every penguin in the array, and for each penguin that can fly, print to the console a message containing the penguin's name and " can fly!" -- for example, "Gunter can fly!" or "Ramón can fly!" (Don't do anything for the penguins that cannot fly.)
 		for (i=0; i<=penguins.length-1; i++) {
-			penguins['numberOfFeet' + i] = "2";
-		}
-
+			if (penguins[i].canFly== true) {
+				console.log(penguins[i].name + " can fly!");
+			};
+		};
 
 		</script>
 	</body>
