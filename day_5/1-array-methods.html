@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Practice Array Methods</title>
+	</head>
+	<body>
+		<script>
+			// Arrays to work on
+			var numbers = [1,12,4,18,9,7,11,3,101,5,6];
+			var strings = ['this','is','a','collection','of','words'];
+
+
+			// Use the above two arrays and practice array methods
+			// Find largest number in numbers
+			function largestNum(numbers) {
+				return numbers.sort((a,b) => b-a)[0]
+			};
+			largestNum(numbers);
+
+			// Find longest string in strings
+			function largestStr(strings) {
+				return strings.sort((a,b) => b.length - a.length)[0];
+			};
+			largestStr(strings);
+
+			// Find all the even numbers
+			function evenNum(numbers) {
+				return numbers.filter(i => i%2 == 0);
+			};
+
+			// Find all the odd numbers
+			function oddNum(numbers) {
+				return numbers.filter(i => i%2 !== 0);
+			}
+
+			// Find all the words that contain 'is' use string method 'contains'
+
+
+
+			// Find all the words that contain 'is' use string method 'indexOf'
+			function wordFind(strings) {
+				return strings.find(str => str);
+			}
+		</script>
+	</body>
+</html>

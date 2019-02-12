@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>String Methods</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<script>
+			
+		// # JavaScript String Exercises
+
+		// ### is_string
+		// Write a JavaScript function to check whether an `input` is a *string or not*.
+
+		//     console.log(is_string('w3resource')); 
+		//     true
+		//     console.log(is_string([1, 2, 4, 0]));
+		//     false
+
+		// ### is_Blank
+		// Write a JavaScript function to check whether a string *is blank or not*.
+
+		//     console.log(is_Blank('')); 
+		//     console.log(is_Blank('abc'));
+		//     true 
+		//     false
+
+		function isBlank (arg) {
+    if (arg=="") {
+		return "string is blank"; }
+		else
+		return "string is not blank";
+		}
+
+		// ### string_Array
+		// Write a JavaScript *function to split a string and convert it into an array* of words.
+
+  	//  console.log(string_to_array("Robin Singh"));
+  	//  ["Robin", "Singh"]
+
+  	function splitString (str, separator) {
+  		var space = ' ';
+  		var arrayOfWords = str.split(' ');
+  		return arrayOfWords;
+  	}
+
+  	// 	### truncate
+		// Write a JavaScript function to remove specified number of characters from a string.
+
+  	//   console.log(truncate_string("Robin Singh",4));
+  	//   "Robi"
+
+  	function sliceString (str, index) {
+  		var truncString = str.slice(index);
+  		return truncString;
+  	}
+
+  	// 	### abbrev_name
+		// Write a JavaScript function *to convert* a string in *abbreviated form*.
+
+  	//   console.log(abbrev_name("Robin Singh"));
+  	//   "Robin S."
+  	function stringToAbbrev (str, index) {
+  		var abbrevString = str.split(" ");
+  		return abbrevString[0] +  " " + abbrevString[1].slice(0,1) + ".";
+  	}
+
+		// 	### protect
+		// Write a JavaScript function to hide email addresses to protect from unauthorized user.
+
+		//   console.log(protect_email("robin_singh@example.com"));
+		//   "robin...@example.com"
+
+		function protectEmail (str, targetLength, padString) {
+			var del = sliceString();
+			var result = del.padEnd(20, '.');
+			return del + result;
+		}
+
+		// ### parameterize
+		// Write a JavaScript function to *parameterize a string*.
+
+  	//   console.log(string_parameterize("Robin Singh from USA."));
+  	//   "robin-singh-from-usa"
+
+	  // ### search II
+	  //  Write a JavaScript function to *create a case-insensitive search*.
+
+	  //  console.log(case_insensitive_search('JavaScript Exercises', 'Exercisess'))
+	  //  "Not Matched"
+
+	  function caseInsensitiveSearch(str, search_str)
+  	{
+    var result= str.search(new RegExp(search_str, "i"));
+    if (result>0)
+    return 'Matched';
+    else
+    return 'Not Matched';  
+   	}
+
+  	//  	### compare
+		// Write a JavaScript function to *test case insensitive* (except special Unicode characters) string comparison.
+
+  	//   console.log(compare_strings('abcd', 'AbcD')); 
+  	//   true
+
+  	function caseInsensitiveComp(str1, str2) {
+    var result= str1.toLowerCase() === st2.toLowerCase()
+    return result;
+   	}
+
+
+		// ### endsWith
+		// Write a JavaScript function to *test* whether a string *ends with a specified string*.
+  	//   console.log(endsWith('JS string exercises', 'exercises'));
+  	//   true
+
+  	function testEndString(str, str3) {
+  		var str3;
+  		var str2 = str.endsWith(str3);
+  		return str2;
+  	}
+
+  	// 	### startsWith
+		// Write a JavaScript function to test whether a *string starts with a specified string*.
+  	//   console.log(startsWith('js string exercises', 'js'));
+  	//   true
+
+  	function testStartString(str, str3) {
+  		var str3;
+  		var str2 = str.startsWith(str3);
+  		return str2;
+  	}
+
+		// 	### uncapitalize
+		// Write a JavaScript function to *Uncapitalize the first character of a string*. 
+		//     console.log(Uncapitalize('Js string exercises'));
+		//     "js string exercises"
+
+		function uncapitalizeFirstChar(str) {
+			var str2 = str[0].toLowerCase();
+			return str2 + str.slice(1);
+		}
+
+		// ### uncapitalize II
+		// Write a JavaScript function to *Uncapitalize the first letter of each word* of a string.
+		//     console.log(unCapitalize_Words('Js String Exercises'));
+		//     "js string exercises"
+
+		function uncapitalizeFirstLetter(str) {
+			var str2 = str.split(" ");
+			for (var i=0; i<str.length-1; i++) {
+				str2[0].toLowerCase();
+			}	
+			return str2;
+		}
+		
+		// ### capitalize 
+		// Write a JavaScript function to *capitalize each* word in the string. 
+		//     console.log(capitalizeWords('js string exercises'));
+		//     "JS STRING EXERCISES"
+
+		function capitalizeEachWord(str) {
+			var str2 = str.toUpperCase();
+			return str2;
+		}
+
+		// ### capitalize II
+		// Write a JavaScript function to *uncapitalize each word* in the string.
+		//     console.log(unCapitalizeWords('JS STRING EXERCISES'));
+		//     "js string exercises"
+
+		function uncapitalizeEachWord(str) {
+			var str2 = str.toLowerCase();
+			return str2;
+		}
+
+
+
+
+		</script>
+
+	</body>
+</html>

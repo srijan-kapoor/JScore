@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+		var words = ['crab','poison','contagious','simple','bring','sharp','playground','poison','communion','simple','bring'];
+
+		// Write a function uniqueArray that receives an array of words as a parameter. And remove the duplicates, and return a new array. 
+		// (indexOf)
+
+		var uniqueArray = words.reduce((a,b)=>{if(a.indexOf(b)== '-1')a.push(b);return a;},[]);
+
+		var words2 = ['machine','subset','trouble','starting','matter','eating','truth','disobedience'];
+
+		// Write a function doesWordExist that will take in an array of words as one argument, and a word to search for as the other. Return true if it exists, otherwise, return false. Don't use indexOf for this one.
+
+		var doesWordExist = function(array, word) {
+			for (var i=0; i<array.length; i++) {
+				if (word == array[i])
+				return true;
+			}
+			return false;
+		};
+
+		function doesWordExist(array, value) {
+			array.forEach(v => (v === value )) 
+			return true;
+		}
+
+	  // write the above code using arrow function
+
+	  var words3 = ['machine','matter','subset','trouble','starting','matter','eating','matter','truth','disobedience','matter'];
+
+		// Write a function howManyTimes that will take in an array of words as one argument, and a word to search for as the other. The function will return the number of times that word appears in the array.
+
+		// using filter
+		function howManyTimes(array, value) {
+    return array.filter((v) => (v === value)).length;}
+
+    // using forEach
+    function getOccurrence(array, value) {
+    var count = 0;
+    array.forEach((v) => (v === value && count++));
+    return count; }
+
+    // Using the reduce() method, how would you sum up the population of every country except China?
+		let data = [
+	  {
+	    country: 'China',
+	    pop: 1409517397,
+	  },
+	  {
+	    country: 'India',
+	    pop: 1339180127,
+	  },
+	  {
+	    country: 'USA',
+	    pop: 324459463,
+	  },
+	  {
+	    country: 'Indonesia',
+	    pop: 263991379,
+	  }
+	  ]
+
+		var sum = data.reduce((acc, value) => {
+	  	return value.country == 'China' ? acc : acc + value.pop; 
+	  }, 0);
+
+		// Use reduce method and summorize the collection like
+		// { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
+		const fruitBasket = ['banana','cherry','orange','apple','cherry','orange','apple','banana','cherry','orange','fig'];
+
+		const count = fruitBasket.reduce((InBasket, fruit) => {
+  	InBasket[fruit] = (InBasket[fruit] || 0) + 1 ;
+  	return InBasket;
+		} , {})
+
+
+		</script>
+	</body>
+</html>
