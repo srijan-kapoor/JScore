@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Array methods with Objects</title>
+	</head>
+	<body>
+		<script>
+			// 1. Write a JavaScript program to list the properties and values of a JavaScript object. (Object.keys)
+
+			let superhero = {alias: "batman", superpower: "willpower", kills: 0}
+											
+			// var listOut =superhero.filter(value) => {
+			// 	return value.alias;
+			// }
+
+			console.log(Object.keys(superhero));
+			console.log(Object.values(superhero));
+
+			// 2. Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
+			var student = { 
+			  name : "David Rayy", 
+			  sclass : "VI", 
+			  rollno : 12
+			};
+
+			delete student.rollno;
+			console.log(student);
+
+
+			// 3. Write a function to get the length of an object.
+			var objLength = Object.keys(student).length;
+
+		</script>
+
+	</body>
+</html>

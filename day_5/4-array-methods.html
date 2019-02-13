@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Array Methods</title>
+	</head>
+	<body>
+		<script>
+				var data = [
+	  {
+	    name: 'Butters',
+	    age: 3,
+	    type: 'dog'
+	  },
+	  {
+	    name: 'Lizzy',
+	    age: 6,
+	    type: 'dog'
+	  },
+	  {
+	    name: 'Red',
+	    age: 1,
+	    type: 'cat'
+	  },
+	  {
+	    name: 'Joey',
+	    age: 3,
+	    type: 'dog'
+	  },
+	   {
+	    name: 'Pochi',
+	    age: 3,
+	    type: 'dog'
+	  }
+	];
+
+	// write a function that will sum all of the dogs ages in dog years using for loop.
+	// 1 human year = 7 dog year
+
+	var ageSum = data.reduce((acc, value) => {
+		return value.type == 'cat' ? acc : acc + value.age*7;
+	}, 0);
+
+	// Write the same function using
+	// 1. filter - for filtering the cat or dog
+	// 2. map - to multiply human year to dog year
+	// 3. reduce - to accumulate total age.
+
+	var dogAgeFilter = data.filter((value) => {
+		return value.type === 'dog';
+	}).map((value) => {
+		return value*7;
+  }).reduce((age, value) => {
+		return age + value.age;
+  });
+
+
+		</script>
+	</body>
+</html>
