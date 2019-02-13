@@ -41,6 +41,23 @@
 			function wordFind(strings) {
 				return strings.find(str => str);
 			}
+
+			// Customers Array
+			var customers = [
+			    { firstname : 'Joe', lastname : 'Blogs'},
+			    { firstname : 'John', lastname : 'Smith'},
+			    { firstname : 'Dave', lastname : 'Jones'},
+			    { firstname : 'Jack', lastname : 'White'}
+			];
+			// Find all customers whose firstname starts with 'J'
+			var firstNamewithJ = customers
+				.filter(v => v.firstname.indexOf('J') == 0);
+			// Create new array with firstname and lastname
+			var name = customers.map(n => { return { name: n.firstname + " " + n.lastname }});
+			// Sort the array created above alphabetically
+			var sortAlpha = ((a,b) => a.name.length - b.name.length);
+			name.sort(sortAlpha);
+
 		</script>
 	</body>
 </html>
