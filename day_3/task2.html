@@ -176,20 +176,36 @@
 	// 	} return product;
 	// }
 
+	// Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backwards like “racecar”
+	var palin = prompt("Enter a string to verify if its palindrome")
+	function palindrome(str)
+	{ var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) { 
+        newString += str[i]; 
+      }
+        return newString;
+
+        if (palin==newString) {
+        	alert("string is palindrome");
+        }
+        	alert("not a palindrome");
+       }
+   // console.log(palindrome(palin));
+
 	// Write a program that asks the user for a number n and prints the sum of the numbers 1 to n
 
 	// Modify the previous program such that only multiples of 5 or 7 are considered in the sum, e.g. n = 20 (5,7,10,14,15,20) 71
 
 	// var num4 = +prompt("Enter a number");
 	// function multiples(number) {
- //  let sum = 0;
- //  for (let i = 0; i <= number; i++) {
+  //  let sum = 0;
+  //  for (let i = 0; i <= number; i++) {
 
- //    if (i % 5 == 0 || i % 7 == 0) {
- //      sum += i;
- //    }
- //  }
- //  return sum;
+  //  if (i % 5 == 0 || i % 7 == 0) {
+  //      sum += i;
+  //    }
+  //  }
+  //  return sum;
 	// }
 	// console.log(multiples(num4));
 
