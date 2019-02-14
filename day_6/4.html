@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+</head>
+<body>
+  <h1>About Me</h1>
+
+  <ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites:  <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+   </ul>
+
+ 	<script>
+   //	1. Add a script tag to the bottom.
+
+	 // 2. Change the body style so it has a font-family of "Arial, sans-serif".
+	 document.body.style.fontFamily = "Arial, sans-serif"
+
+	 //	3. Replace each of the spans (nickname, favorites, hometown) with your own information.
+	 var list = document.body.children[1].children[0].children[0].replaceWith("notpluto")
+	 var list = document.body.children[1].children[1].children[0].replaceWith("Astronomy")
+	 var list = document.body.children[1].children[2].children[0].replaceWith("Far-far-away")
+
+	 //	4. Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
+	 var list = document.querySelectorAll('li')
+	 list.forEach((val) =>val.className = "listitem")
+	 list.forEach((val) =>val.style.color = "red")
+
+	//5. Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+	document.body.appendChild(document.createElement('img'))
+	document.body.children[3].src = "http://icons.iconarchive.com/icons/thesquid.ink/free-flat-sample/256/owl-icon.png"
+
+  </script>
+ </body>
+</html>
+
