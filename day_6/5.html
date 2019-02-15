@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>Book List</title>
+ </head>
+	<body>
+	<h1>My Book List</h1>
+	<script>
+
+	// 1. Create a webpage with an h1 of "My Book List".
+
+	// 2. Add a script tag to the bottom of the page, where all your JS will go.
+
+	// 3. Use This Array
+
+  var books = [{title: 'The Design of EveryDay Things',
+   author: 'Don Norman',
+   alreadyRead: false
+  },
+  {title: 'The Most Human Human',
+   author: 'Brian Christian',
+   alreadyRead: true
+  }]
+
+  // 4. Iterate through the array of books. For each book, create a `p` element with the book title and author and append it to the page.
+	for (var i in books) {
+		var bookName = document.createElement('p');
+		var bookDetails = document.createTextNode(books[i].title + 'by ' + books[i].author);
+		bookName.appendChild(bookDetails);
+		document.body.appendChild(bookName);
+		}
+
+	// 5. Use a `ul` and `li` to display the books.
+	var bookList = document.createElement('ul');
+	for (var i in books) {
+	  var bookItem = document.createElement('li');
+	  var bookDetails = document.createTextNode(books[i].title + ' by ' + books[i].author);
+	  bookItem.appendChild(bookDescription);
+	  bookList.appendChild(bookItem);
+	}
+	document.body.appendChild(bookList);
+
+	
+
+
+	</script>
+
+	</body>
+</html>
+

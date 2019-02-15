@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" type="text/css" href="assets/stylesheet/style.css">
+	  <title>JS + CSS Clock</title>
+	</head>
+	<body>
+		<h1>Analog Clock</h1>
+		<div class="analog">
+
+			<div class="hour-wrapper">
+				<div class="hour"></div>
+			</div>
+
+			<div class="minute-wrapper">
+				<div class="minute"></div>
+			</div>
+
+			<div class="second-wrapper">
+				<div class="second"></div>
+			</div>
+
+		</div>
+		<script>
+			
+		function getTime(){
+		var d = new Date();
+		var hours = d.getHours();
+		var minutes = d.getMinutes();
+		var sec = d.getSeconds();
+		console.log(`${hours} ${minutes} ${sec}`)
+		}
+
+		setInterval(getTime, 1000);
+
+		</script>
+	</body>
+</html>
