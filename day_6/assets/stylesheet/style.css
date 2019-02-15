@@ -12,7 +12,7 @@ h1{
 	width: 10rem; 
 	border: 4px solid black; 
 	border-radius: 50%;
-	background: #ccc;
+	background: #a3b9b9;
 }
 .analog:after {
   background: #000;
@@ -50,7 +50,7 @@ h1{
 	position: absolute;
 	top: 8%;
 	left: 49%;
-	transform-origin: 50% 100%;
+	transform-origin: 50% 85%;
 	z-index: 10;
 }
 .second{
@@ -60,17 +60,17 @@ h1{
 	position: absolute;
 	top: 10%;
 	right: 49%;
-	transform-origin: 50% 80%;
+	transform-origin: 50% 84%;
 	z-index: 10;
 }
 
 /* CSS Animation */
-@keyframes spin {
+/*@keyframes spin {
   100% {
     transform: rotate(360deg);
   }
-}
-.hour-wrapper {
+}*/
+/*.hour-wrapper {
   animation: spin 43200s infinite linear;
 }
 .minute-wrapper {
@@ -79,3 +79,4 @@ h1{
 .second-wrapper {
   animation: spin 60s infinite linear;
 }
+*/
