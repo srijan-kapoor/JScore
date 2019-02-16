@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	   <meta charset="UTF-8">
+	   <title>Document</title>
+	</head>
+	<body>
+	  <div class="header">
+	  </div>
+	  <section id="container">
+	      <ul>
+          <li class="first">one</li>
+          <li class="second">two</li>
+          <li class="third">three</li>
+	      </ul>
+	      <ol>
+          <li class="first">one</li>
+          <li class="second">two</li>
+          <li class="third">three</li>
+	      </ol>
+	  </section>
+	  <div class="footer">
+	  </div>
+	  <script>
+	  	//Select the section with an id of container without using querySelector.
+	  	var contain = document.getElementById('container')
+
+	  	//Select the section with an id of container using querySelector.
+	  	var new_contain = document.querySelector('#container')
+
+	  	//Select all of the list items with a class of "second".
+	  	var second = document.body.getElementsByClassName('second')
+
+	  	//Select a list item with a class of third, but only the list item inside of the ol tag.
+	  	var third = document.body.children[1].children[1].querySelector('.third')
+
+	  	//Give the section with an id of container the text "Hello!".
+	  	// var contain = document.getElementById('container')
+	  	// contain.innerText = "Hello"
+
+	  	//Add the class main to the div with a class of footer.
+	  	var wave = document.body.children[2].className += " main"
+	  	document.body.children[2].classList.add('main')
+
+	  	//Remove the class main on the div with a class of footer.
+	  	document.body.children[2].classList.remove('main')
+
+	  	//Create a new li element.
+	  	document.body.appendChild(document.createElement('li'))
+
+	  	//Give the li the text "four".
+	  	document.body.children[4].innerText = "four"
+
+	  	//Append the li to the ul element.
+	  	document.querySelector('ul').appendChild(document.body.children[4])
+
+	  	//Loop over all of the list inside the ol tag and give them a background color of "green".
+	  	 var list = document.querySelectorAll('ol')
+	  	 list.forEach((val) => val.style.background = "green")
+
+	  	 //Remove the div with a class of footer.
+
+
+
+
+
+
+	  </script>
+
+	</body>
+</html>
