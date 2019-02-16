@@ -22,15 +22,13 @@
 
 		var btn = document.querySelector('button')
 		btn.addEventListener('click', newColor)
-		
+
 		function randomColor() {
 			return '#' + Math.floor(Math.random()* 345678)
 		}
 		function newColor() {
 			return document.body.style.backgroundColor = randomColor()
 		}
-
-
 
     </script>
   </body>
