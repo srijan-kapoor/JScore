@@ -5,11 +5,12 @@ var quotes;
 // var btn = document.querySelector('button')  
 document.addEventListener('keyup', newQuote)
 
-function getNum() {
-    return Math.floor(Math.random() * quotes.length)  
-}
+// function getNum() {
+//     var num = Math.floor(Math.random() * quotes.length)  
+// }
 function newQuote() {
-    return document.querySelector('.quotes').innerText = quotes[getNum()].quoteAuthor + ":" + "\n" + quotes[getNum()].quoteText
+    var num = Math.floor(Math.random() * quotes.length)  
+    return document.querySelector('.quotes').innerText = quotes[num].quoteAuthor + ":" + "\n" + quotes[num].quoteText
 }
 // btn.addEventListener('click', newQuote)
 
