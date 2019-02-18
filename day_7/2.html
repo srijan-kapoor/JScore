@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Change Background Color</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/stylesheet/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/stylesheet/main.css"/>
   </head>
   <body>
-  	<h1> Click to change the background </h1>
-  	<button> Click Me </button>
+  	<h1> Press a key to change the background </h1>
+  	<!-- <button> Click Me </button> -->
     <script>
    		//#Todo
 			// Make a webpage where when you click the background of the page should change to some different color.
@@ -20,11 +20,11 @@
 		var change = document.querySelector('h1')
 		change.addEventListener('click', red => document.body.style.backgroundColor = "red")
 
-		var btn = document.querySelector('button')
-		btn.addEventListener('click', newColor)
+		// var btn = document.querySelector('button')
+		document.body.addEventListener('keyup', newColor)
 
 		function randomColor() {
-			return '#' + Math.floor(Math.random()* 345678)
+			return '#' + Math.floor(Math.random()* 345689)
 		}
 		function newColor() {
 			return document.body.style.backgroundColor = randomColor()

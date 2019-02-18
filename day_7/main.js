@@ -8,10 +8,12 @@ document.addEventListener('keyup', newQuote)
 // function getNum() {
 //     var num = Math.floor(Math.random() * quotes.length)  
 // }
-function newQuote() {
-    var num = Math.floor(Math.random() * quotes.length)  
+function newQuote(e) {
+    var num = Math.floor(Math.random() * quotes.length) 
+    if (e.keyCode==32) 
     return document.querySelector('.quotes').innerText = quotes[num].quoteAuthor + ":" + "\n" + quotes[num].quoteText
 }
+
 // btn.addEventListener('click', newQuote)
 
 quotes = [
