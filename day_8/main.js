@@ -6,7 +6,8 @@ const completed = document.querySelector('.complete');
 const active = document.querySelector('.active');
 const all = document.querySelector('.all');
 const left = document.querySelector('.items-left');
-console.log(left)
+const arrow = document.querySelector('.fas');
+// console.log(left)
 
 const allTodo = [
   {
@@ -68,7 +69,7 @@ function toggleTodo(event) {
     allTodo[index].done = !allTodo[index].done;
     var strike = document.body.querySelectorAll('.display-todo');
     strike.forEach(todo => {
-      console.log(todo);
+      // console.log(todo);
       if (todo.done) {
         todo.style.textDecoration = 'line-through';
       }
@@ -102,12 +103,30 @@ displayTodo(allTodo);
     displayTodo(allTodo);
   }
   function enter(e) {
-    console.log(e.keyCode)
+    // console.log(e.keyCode)
    if (e.keyCode==13)  {
       addTodo(todoText.value)
    }
   }
+  // function collapse(e) {
+  //   if(!todo.done) {
+  //     for (var li of document.querySelectorAll('ul')) {
+  //         // console.log(todo.done);
+  //         // todo.done == true;
+  //       }
+  //       return displayTodo(e);
+  //     }
+  // }
 
+  function collapse() {
+    if(ul.classList.contains('none'))
+    {
+      ul.classList.remove('none');
+    }
+    else {
+      ul.classList.add('none');
+    }
+  }
 // To check the number of items left
   function itemsLeft() {
     let countChecked = allTodo.filter(v => v.done == false);
@@ -122,6 +141,8 @@ ul.addEventListener('click', removeTodo)
 completed.addEventListener('click', completeTodo)
 active.addEventListener('click', activeTodo)
 all.addEventListener('click', allTodoo)
+arrow.addEventListener('click',collapse)
+// arrow.addEventListener('click', expand)
 
 
 
