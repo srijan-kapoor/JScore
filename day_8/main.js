@@ -7,18 +7,11 @@ const active = document.querySelector('.active');
 const all = document.querySelector('.all');
 const left = document.querySelector('.items-left');
 const arrow = document.querySelector('.fas');
-// console.log(left)
+// const li = document.getElementsbyTagName('li');
 
-const allTodo = [
-  {
-    name: 'One',
-    done: false,
-  },
-  {
-    name: 'Two',
-    done: false,
-  },
-];
+const allTodo = JSON.parse(localStorage.getItem('srijan-todo')) || [];
+
+
 function displayTodo(array) {
   ul.innerHTML = '';
   array.forEach((todo, i) => {
@@ -49,6 +42,9 @@ function displayTodo(array) {
   });
   itemsLeft();
 }
+function setToLocalStorage(data){
+  localStorage.setItem('srijan-todo', JSON.stringify(data));
+}
 // Adding a new item to the list
 function addTodo(todoName) {
   const singleTodo = {
@@ -59,6 +55,7 @@ function addTodo(todoName) {
     allTodo.push(singleTodo);
   }
   todoText.value = '';
+  setToLocalStorage(allTodo);
   displayTodo(allTodo);
 }
 
@@ -67,18 +64,10 @@ function toggleTodo(event) {
   if (event.target.localName === 'input') {
     const index = event.target.dataset.index;
     allTodo[index].done = !allTodo[index].done;
-    var strike = document.body.querySelectorAll('.display-todo');
-    strike.forEach(todo => {
-      // console.log(todo);
-      if (todo.done) {
-        todo.style.textDecoration = 'line-through';
-      }
-    }
-    )
-    return strike;
-    // console.log(allTodo);
-  }
-  displayTodo(allTodo);
+    // strike();
+    displayTodo(allTodo);
+    setToLocalStorage(allTodo);
+  } 
 }
 displayTodo(allTodo);
 
@@ -89,6 +78,7 @@ displayTodo(allTodo);
     // console.log(id, 'removeTodo');
     allTodo.splice(id, 1);
     displayTodo(allTodo);
+    setToLocalStorage(allTodo);
     }
   }
   function completeTodo(e) {
@@ -108,16 +98,6 @@ displayTodo(allTodo);
       addTodo(todoText.value)
    }
   }
-  // function collapse(e) {
-  //   if(!todo.done) {
-  //     for (var li of document.querySelectorAll('ul')) {
-  //         // console.log(todo.done);
-  //         // todo.done == true;
-  //       }
-  //       return displayTodo(e);
-  //     }
-  // }
-
   function collapse() {
     if(ul.classList.contains('none'))
     {
@@ -127,6 +107,10 @@ displayTodo(allTodo);
       ul.classList.add('none');
     }
   }
+  // function strike(i) {
+  //   var strike = document.querySelector('.display-todo').style.textDecoration ='line-through'
+  //   return strike;
+  // }
 // To check the number of items left
   function itemsLeft() {
     let countChecked = allTodo.filter(v => v.done == false);
@@ -142,7 +126,8 @@ completed.addEventListener('click', completeTodo)
 active.addEventListener('click', activeTodo)
 all.addEventListener('click', allTodoo)
 arrow.addEventListener('click',collapse)
-// arrow.addEventListener('click', expand)
+// li.addEventListener('click', strike)
+// ul.addEventListener('click,', strike)
 
 
 

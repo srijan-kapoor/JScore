@@ -8,7 +8,7 @@
 }
 .fas{
 	position: absolute;
-	top: 55px;
+	top: 23px;
 	font-size: 1.6rem;
 	left: 15px;
 	color: #4d4d4d;
@@ -77,6 +77,7 @@ li {
 	/*opacity: 0.4;*/
 	color: #d9d9d9;
 	font-weight: 100;
+	width: 415px;
 }
 .button-wrap{
 	display: flex;	
@@ -126,4 +127,6 @@ button:focus{
 .none{
 	display: none;
 }
-
+.strike{
+	text-decoration: line-through;
+}
