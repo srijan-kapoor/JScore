@@ -3,15 +3,18 @@ var quotes;
 // Write your code here
 
 // var btn = document.querySelector('button')  
-document.addEventListener('keyup', newQuote)
+document.addEventListener('keyup', newQuote);
+const twitter = document.getElementById('twitter');
 
 // function getNum() {
 //     var num = Math.floor(Math.random() * quotes.length)  
 // }
 function newQuote(e) {
     var num = Math.floor(Math.random() * quotes.length) 
-    if (e.keyCode==32) 
-    return document.querySelector('.quotes').innerText = quotes[num].quoteAuthor + ":" + "\n" + quotes[num].quoteText
+    if (e.keyCode==32) {
+        twitter.href = `http://twitter.com/share?text=${quotes[num].quoteText}&url=http://&hashtags=quotes,notpluto_`;
+        return document.querySelector('.quotes').innerText = quotes[num].quoteAuthor + ":" + "\n" + quotes[num].quoteText;
+    }
 }
 
 // btn.addEventListener('click', newQuote)
