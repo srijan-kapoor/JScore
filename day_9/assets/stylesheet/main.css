@@ -1,0 +1,41 @@
+.wrapper{
+	max-width: 600px;
+	margin: 0 auto;
+	width: 100%;
+}
+body{
+	background: #EEEEEE;
+	font-size: 14px;
+	font-family: 'Monospace', Serif;
+}
+h4{
+	margin: 20px 0;
+	font-size: 1.1rem;
+}
+.input{
+	height: 3.2rem;
+	font-size: 1.2rem;
+	padding-left: 10px;
+	background: transparent;
+	outline: 0;
+	border: 0;
+}
+.btn{
+	margin: 5px;
+	border-radius: 5px;
+	background: #EEEEEE;
+	font-size: 1rem;
+	padding: 0.5rem;
+	outline: 0;
+	border: 0;
+}
+.tag{
+	background: #fff;
+	border-radius: 5px;
+}
+.delete{
+	/*display: none;*/
+}
+.test{
+	display: inline-block;
+}
