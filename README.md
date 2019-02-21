@@ -1,1 +1,1 @@
-#JScore
+#JS_core
