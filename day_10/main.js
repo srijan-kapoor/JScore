@@ -2,6 +2,8 @@ const cards = document.querySelectorAll('.memory-card');
 
 let isCardFlipped = false;
 let firstCard, secondCard;
+let count = document.querySelector('.moves');
+let counter = 0;
 
 function flipCard() {
 	// this keyword represents the element which fired the event
@@ -15,9 +17,10 @@ function flipCard() {
 		isCardFlipped = false; // it means user is clicking on the firstCard
 		secondCard = this;
 
-		// movesCounter();
 		checkMatch();
 	}
+	counter++
+	count.innerHTML = counter+" move(s)";
 }
 
 startTimer();
