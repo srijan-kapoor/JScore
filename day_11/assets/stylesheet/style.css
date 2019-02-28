@@ -1,0 +1,88 @@
+body{
+	background: #111111;
+	font-family: Roboto,Helvetica,sans-serif;
+	margin: auto;
+	box-sizing: border-box;
+	font-weight: 300;
+	line-height: 1.5;
+}
+.content{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 800px;
+	position: relative;
+}
+h1{
+	color: #C87624;
+	font-family: 'Signika', sans-serif;
+	font-weight: 400;
+	text-align: center;
+	margin: 40px;
+	letter-spacing: 1px;
+	font-size: 1.6rem;
+}
+h2{
+	color: #3F3D44;
+	font-size: 1.8rem;
+	letter-spacing: 1.2px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+.snippet-box{
+	width: 700px;
+	background: #C87624;
+	border-radius: 7px;
+	margin-top: 40px;
+	/*padding: 20px;*/
+}
+.snippet-text{
+	width: 580px;
+	background: #FFFFFF;
+	border-radius: 7px 0 0 7px;
+	color: black;
+	font-size: 1rem;
+	padding: 20px;
+}
+.paraContent{
+	margin-top: 20px;
+	color: black;
+	letter-spacing: 1px;
+	font-weight: 300;
+	font-size: 1.1rem;
+}
+.syntaxContent{
+	color: black;
+	font-weight: 400;
+	font-size: 1rem;
+	background: #F2F2F2;
+	font-family: 'Inconsolata', monospace;
+}
+.settings .fas{
+	color: #C87624;
+	font-size: 44px;
+	top: -60px;
+	left: -300px;
+	position: absolute;
+}
+.save-folder{
+	color: #C87624;
+	font-size: 44px;
+	position: absolute;
+	right: -300px;
+	top: -80px;
+}
+.btn{
+	color: black;
+	background: #fff;
+	font-size: 0.8rem;
+	height: 2rem;
+	width: 4rem;
+	font-weight: 500;
+	margin: 10px;
+	position: absolute;
+	top: 20px;
+	right: 100px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+
+}

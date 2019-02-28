@@ -1,0 +1,13 @@
+{
+  "name": "New Tab Extension",
+  "description" : "Build an Extension!",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "chrome_url_overrides":{
+    "newtab" : "index.html"
+  },
+  "permissions": ["activeTab"],
+  "icons": {
+    "128": "assets/media/icon.png"
+    }
+}
