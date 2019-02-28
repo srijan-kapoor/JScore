@@ -5,6 +5,7 @@ body{
 	box-sizing: border-box;
 	font-weight: 300;
 	line-height: 1.5;
+	/*color: #fff;*/
 }
 .content{
 	margin: 0 auto;
@@ -12,7 +13,7 @@ body{
 	max-width: 800px;
 	position: relative;
 }
-h1{
+.saved-head, h1{
 	color: #C87624;
 	font-family: 'Signika', sans-serif;
 	font-weight: 400;
@@ -70,19 +71,17 @@ h2{
 	right: -300px;
 	top: -80px;
 }
-.btn{
-	color: black;
-	background: #fff;
-	font-size: 0.8rem;
-	height: 2rem;
-	width: 4rem;
-	font-weight: 500;
-	margin: 10px;
+.bookmark{
 	position: absolute;
-	top: 20px;
-	right: 100px;
-	outline: none;
-	border: none;
-	border-radius: 5px;
-
+	top: 60px;
+	right: 200px;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+.back{
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+	font-size: 44px;
+	color: #C87624
 }

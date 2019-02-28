@@ -1,4 +1,6 @@
 const snipText = document.querySelector('.snippet-text');
+const bookmark = document.querySelector('.bookmark');
+const saved = document.querySelector('.save-folder');
 
 // display new snippet
 function addText(text){
@@ -21,7 +23,54 @@ function addText(text){
 
 }
 
+// Bookmarking a snippet
+var markedArray = [];
+function storedSnippet(e){
+	e.target.classList.replace('far', 'fas')
+	markedArray.push(e.target.parentElement.parentElement)
+		console.dir(e.target);
+	}
+
+// To show the bookmarked array
+function showBookmark(e) {
+	console.log(e.target);
+	if (e.target.className === "far fa-folder") {
+		document.body.innerHTML = "";
+		let newPara = document.createElement('p');
+		newPara.classList.add('saved-head')
+		newPara.innerText = "Saved List";
+
+		document.body.appendChild(newPara);
+		document.body.appendChild(markedArray[0]);
+
+		let div = document.createElement('div');
+		div.classList.add('back');
+		let backArrow = document.createElement('i');
+		backArrow.classList.add('far');
+		backArrow.classList.add('fa-arrow-alt-circle-left');
+		backArrow.addEventListener('click', goBack)
+
+		div.appendChild(backArrow);
+		document.body.appendChild(div);
+		console.log(markedArray);
+	}
+}
+
+function goBack(){
+	document.body.innerHTML = "";
+	console.log('it works');
+	
+	addText();
+}
+
+// const backArrow = document.querySelector('.back');
+saved.addEventListener('click', showBookmark)
+bookmark.addEventListener('click', storedSnippet)
 window.addEventListener('load', addText)
+
+
+
+
 
 var stupidArray = [
 	{	"head": "toggleClass",
@@ -65,5 +114,19 @@ var stupidArray = [
 		"paraContent": "Converts a NodeList to an array. Use spread operator inside new array to convert a NodeList to an array.",
 		"syntaxContent": "const nodeListToArray = nodeList => [...nodeList];"
 	},
-]
+	{	"head": "currentURL",
+		"paraContent": "Returns the current URL.Use window.location.href to get current URL.",
+		"syntaxContent": "const currentURL = () => window.location.href;"
+	},
+	{
+		"head": "elementContains",
+		"paraContent": "Returns true if the parent element contains the child element, false otherwise.Check that parent is not the same element as child, use parent.contains(child) to check if the parent element contains the child element.",
+		"syntaxContent": "const elementContains = (parent, child) => parent !== child && parent.contains(child);"
+	},
+	{
+		"head": "insertBefore",
+		"paraContent": "Inserts an HTML string before the start of the specified element.Use el.insertAdjacentHTML() with a position of 'beforebegin' to parse htmlString and insert it before the start of el.",
+		"syntaxContent": "const insertBefore = (el, htmlString) => el.insertAdjacentHTML('beforebegin', htmlString);"
+	}
+]		
 
