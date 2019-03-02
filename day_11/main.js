@@ -1,9 +1,15 @@
 const snipText = document.querySelector('.snippet-text');
 const bookmark = document.querySelector('.bookmark');
 const saved = document.querySelector('.save-folder');
+let newPara = document.createElement('p');
+const setting = document.querySelector('.settings');
+
+function setToLocalStorage(data) {
+	localStorage.setItem('markedArray', JSON.stringify(data));
+}
 
 // display new snippet
-function addText(text){
+function addText(){
 	const title = document.createElement('h2');
 	const para = document.createElement('p');
 	const syntax = document.createElement('span');
@@ -20,15 +26,30 @@ function addText(text){
 	document.querySelector('h2').innerHTML = stupidArray[num].head;
 	document.querySelector('p').innerHTML = stupidArray[num].paraContent; 
 	document.querySelector('span').innerHTML = stupidArray[num].syntaxContent;
+	setToLocalStorage(markedArray);
+}
 
+// Back button 
+function addBackButton() {
+	let div = document.createElement('div');
+	div.classList.add('back');
+	let backArrow = document.createElement('i');
+	backArrow.classList.add('far');
+	backArrow.classList.add('fa-arrow-alt-circle-left');
+	backArrow.addEventListener('click', goBack)
+
+	div.appendChild(backArrow);
+	document.body.appendChild(div);
 }
 
 // Bookmarking a snippet
-var markedArray = [];
+var markedArray = JSON.parse(localStorage.getItem("markedArray")) || [];
+setToLocalStorage(markedArray);
 function storedSnippet(e){
-	e.target.classList.replace('far', 'fas')
-	markedArray.push(e.target.parentElement.parentElement)
-		console.dir(e.target);
+	e.target.classList.toggle('fas');
+	markedArray.push(e.target.parentElement.parentElement.innerText);
+	console.log(markedArray, e.target.parentElement.parentElement.innerText);
+	// setToLocalStorage(markedArray);
 	}
 
 // To show the bookmarked array
@@ -36,34 +57,50 @@ function showBookmark(e) {
 	console.log(e.target);
 	if (e.target.className === "far fa-folder") {
 		document.body.innerHTML = "";
-		let newPara = document.createElement('p');
-		newPara.classList.add('saved-head')
+
+		newPara.classList.add('saved-head');
 		newPara.innerText = "Saved List";
-
 		document.body.appendChild(newPara);
-		document.body.appendChild(markedArray[0]);
 
-		let div = document.createElement('div');
-		div.classList.add('back');
-		let backArrow = document.createElement('i');
-		backArrow.classList.add('far');
-		backArrow.classList.add('fa-arrow-alt-circle-left');
-		backArrow.addEventListener('click', goBack)
-
-		div.appendChild(backArrow);
-		document.body.appendChild(div);
-		console.log(markedArray);
+		for (var i=0; i<markedArray.length -1; i++) {
+		document.body.innerText += markedArray[i];
+			return markedArray;
+		}
+		addBackButton();
+		setToLocalStorage(markedArray);
 	}
 }
 
 function goBack(){
-	document.body.innerHTML = "";
+	// newPara.innerHTML = "";
+	document.body.querySelector('.snippet-text').innerHTML = "";
 	console.log('it works');
-	
-	addText();
+	// addText();
 }
 
-// const backArrow = document.querySelector('.back');
+function Settings() {
+	// Clearing DOM elements and adding new content
+	document.body.innerHTML = "";
+	let title = document.createElement('h1'); 
+	title.innerHTML = "Hi! You may customize your extension here."
+	var btn = document.createElement('button');
+	btn.classList.add('btn');
+	document.body.appendChild(title);
+	document.body.appendChild(btn);
+	btn.innerHTML = "Submit";
+
+	// Adding an input box
+	var input = document.createElement('input');
+	input.classList.add('userInput');
+	document.body.appendChild(input);
+
+
+	addBackButton();
+	console.dir(btn);
+}
+
+// Event Listeners
+setting.addEventListener('click', Settings)
 saved.addEventListener('click', showBookmark)
 bookmark.addEventListener('click', storedSnippet)
 window.addEventListener('load', addText)
@@ -71,8 +108,7 @@ window.addEventListener('load', addText)
 
 
 
-
-var stupidArray = [
+var stupidArray = JSON.parse(localStorage.getItem('stupidArray')) || [
 	{	"head": "toggleClass",
 		"paraContent": "Toggle a class for an element. Use element.classList.toggle() to toggle the specified class for the element.",
 		"syntaxContent": "const toggleClass = (el, className) => el.classList.toggle(className)"
