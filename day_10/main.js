@@ -69,7 +69,11 @@ function startTimer(){
             minute = 0;
         }
     },1000);
+    // If succced count === 8
+    // if(count === 8) clearInterval(interval)
 }
+
+
 
 
 
