@@ -4,9 +4,9 @@ const saved = document.querySelector('.save-folder');
 let newPara = document.createElement('p');
 const setting = document.querySelector('.settings');
 
-function setToLocalStorage(data) {
-	localStorage.setItem('markedArray', JSON.stringify(data));
-}
+// function setToLocalStorage(data) {
+// 	localStorage.setItem('markedArray', JSON.stringify(data));
+// }
 
 // display new snippet
 function addText(){
@@ -26,7 +26,7 @@ function addText(){
 	document.querySelector('h2').innerHTML = stupidArray[num].head;
 	document.querySelector('p').innerHTML = stupidArray[num].paraContent; 
 	document.querySelector('span').innerHTML = stupidArray[num].syntaxContent;
-	setToLocalStorage(markedArray);
+	// setToLocalStorage(markedArray);
 }
 
 // Back button 
@@ -43,12 +43,14 @@ function addBackButton() {
 }
 
 // Bookmarking a snippet
-var markedArray = JSON.parse(localStorage.getItem("markedArray")) || [];
-setToLocalStorage(markedArray);
+var markedArray = [];
+// setToLocalStorage(markedArray);
 function storedSnippet(e){
 	e.target.classList.toggle('fas');
-	markedArray.push(e.target.parentElement.parentElement.innerText);
-	console.log(markedArray, e.target.parentElement.parentElement.innerText);
+	console.log(e)
+	markedArray.push(e.target.parentElement.parentElement.innerHTML);
+	localStorage.setItem('markedArray', e.target.parentElement.parentElement.innerText);
+	console.log(markedArray,"hello", e.target.parentElement.parentElement.innerText);
 	// setToLocalStorage(markedArray);
 	}
 
@@ -62,14 +64,14 @@ function showBookmark(e) {
 		newPara.innerText = "Saved List";
 		document.body.appendChild(newPara);
 
-		for (var i=0; i<markedArray.length -1; i++) {
-		document.body.innerText += markedArray[i];
-			return markedArray;
+		// for (var i=0; i<markedArray.length -1; i++) {
+		document.body.innerHTML += markedArray[0];
+			// return markedArray;
 		}
 		addBackButton();
 		setToLocalStorage(markedArray);
 	}
-}
+// }
 
 function goBack(){
 	// newPara.innerHTML = "";
