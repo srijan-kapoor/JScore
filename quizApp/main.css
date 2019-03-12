@@ -1,0 +1,61 @@
+@import url(https://meyerweb.com/eric/tools/css/reset/reset.css);
+
+body{
+	font-family: 'Raleway', sans-serif;
+	color: black;
+	background: #A85166;
+	box-sizing: border-box;
+}
+header,.wrapper{
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+}
+header{
+	margin-top: 2rem;
+	font-size: 3rem;
+	font-weight: 300px;
+	/*text-transform: uppercase;*/
+	padding: 2.4rem; 
+	color: #fff;
+}
+h4{
+	font-size: 28px;
+	padding: 3rem 3rem 0 3rem;
+}
+.btn{
+	color: #fff;
+	background: black;
+	font-size: 0.8rem;
+	height: 2.6rem;
+	width: 6rem;
+	border: 0;
+	padding: 10px;
+	font-weight: 500;
+	margin: 10px;
+	outline: 0;
+	cursor: pointer;
+	border-radius: 6px;
+}
+.begin{
+	margin-left: 3rem;
+	margin-top: 2rem;
+}
+.intro{
+	height: 220px;
+	background: #ff6b00;
+	border-radius: 5px;
+}
+.inner{
+	background: #F5F3F6;
+	width: 540px;
+	height: 220px;
+	/*margin: 3rem;*/
+	border-radius: 5px;
+}
+.hidden {
+	display: none;
+}
+.answers-container {
+	list-style: none;
+}
