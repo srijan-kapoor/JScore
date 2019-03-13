@@ -1,0 +1,18 @@
+*{
+	margin: 30px 20px;
+}
+.tile.is-child,
+.tile.is-parent {
+	background: #2D3254;
+}
+.tile{
+	display: inline-block;
+}
+.grid{
+	display: grid;
+	grid-template-columns: 1fr;
+}
+/*.hide{
+	display: none;
+}
+*/
