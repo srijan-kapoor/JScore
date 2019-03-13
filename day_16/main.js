@@ -85,7 +85,7 @@ class Book extends Booklist{
         this.Title = Title;
         this.Genre = Genre;
         this.Author = Author;
-    this.isRead = false;
+        this.isRead = false;
         this.dateRead = new Date();
     }
   revise(ifRead){
