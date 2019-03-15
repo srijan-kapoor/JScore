@@ -48,13 +48,14 @@ table {
 }
 
 /*Main CSS Styling*/
-*{
+/**{
 	background: #030303;
-}
+}*/
 .menu{
-	background: #1A1A1B;
-	max-width: auto;
+	background: #fff;
+	max-width: 1100px;
 	width: 100%;
+	/*display: inline-block;*/
 }
 .fa-reddit{
 	background: #ED4233;
@@ -65,18 +66,30 @@ table {
 }
 .menu-items{
 	font-family: 'Noto Sans', sans-serif;
+	display: flex;
+	/*justify-content: space-around;*/
+}
+.menu-items .sub{
 	display: inline-block;
+	line-height: 1.5;
+	color: #1F1F1F;
 }
 .icon-text{
-	color: #D7DADC;
+	color: #1F1F1F;
 	font-size: 1.4rem;
+	line-height: 2.1;
+}
+svg{
+	margin-top: 12px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 .input-search{
 	margin: 0.6rem 1rem;
-  background-color: #1A1A1B;
+  background-color: #F2F2F2;
   outline: none;
   border: none;
-  width: 30%;
+  width: 60%;
   height: 34px;
   vertical-align: middle;
   border-radius: 4px;
@@ -90,28 +103,36 @@ table {
 .fa-search{
 	color: #fff;
 }
-.nav-button{
-	/*vertical-align: middle;*/
-	color: #d7dadc;
-	outline: none;
-	border: none;
-	margin-left: 10px;
-	background: transparent;
-  border-radius: 4px;
-  padding: 0px 20px 0px 20px;
-  width: 200px;
+
+.menu-items img{
+	margin: 12px 10px 0 20px;
 }
-.nav-button img{
-	/*margin-top: 12px;*/
-}
-.nav-button span{
-	font-size: 1rem;
-	margin-left: 6px;
-	letter-spacing: 1px;
+.menu-items .sub{
+	margin: 12px 10px 0 0px;
+	font-size: 14px;
+	line-height: 2;
 }
 .nav-button:hover{
 	border: 1px solid rgb(215, 218, 220);
 }
+.nav-btn{
+	color: #fff;
+	background: #1C66B3;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	width: 8rem;
+	border: 1px solid #fff;
+	padding: 10px;
+	font-weight: 500;
+	margin: 10px;
+	border-radius: 6px;
+}
+.nav-btn-login{
+	background: #fff;
+	color: #1C66B3;
+}
+
+/*Main section*/
 .hero{
 	background: #175BA1;
 	display: flex;
@@ -137,39 +158,237 @@ table {
 	left: 10%;
 	background: transparent;
 }
+/* Subreddit bar*/
 
-/* Section two*/
+.subreddit-bar{
+	background: #1C416A;
+	max-width: auto;
+	width: 100%;
+}
+.subreddit-menu-list{
+	list-style: none;
+}
+.menu-list{
+	display: inline-block;
+	padding: 10px;
+	margin: 0 10px;
+	color: #A6ACB3;
+	font-size: 0.8rem;
+	cursor: pointer;
+	user-select: none;
+}
+.subreddit-bar li:first-child{
+	margin-left: 4rem;
+}
+li:first-child:active,
+li:first-child: focus{
+	color: #fff;
+}
 
-.cards{
-	max-width: 1000px;
+/* Card Styles*/
+
+.main-section{
+	background: #F2F2F2;
+}
+.card{
+	display: flex;
+}
+.wrapper{
+	max-width: 1100px;
 	width: 100%;
 	margin: 0 auto;
 }
-.card-parent{
-	background: #030303;
-}
-.container-card{
-	margin: 40px 0;
+.post-container {
+	margin-top: 40px;
 	display: grid;
-	grid-template-columns: 3fr 1fr;
-	grid-column-gap: 40px;
+	grid-template-columns: 700px;
+	grid-column-gap: 20px;
 }
-.card-content{
-	justify-self: start;
-	padding: 20px;
-	background: #1A1A1B;
-	color: #D1D4D6;
-	font-family: 'Noto Sans', sans-serif;
+.post {
+	/*background-color: white;*/
+	display: flex;
+	margin-bottom: 10px;
+	border: 1px solid rgb(194, 193, 193);
+	cursor: pointer;
+}
+.post:hover{
+	border: 1px solid #898989;
+}
+.post-content p{
+	color: #446384;
+	margin: 10px 0;
+}
+.posted-by a{
+	/*margin-bottom: 10px;*/
+	text-decoration: none;
+}
+.post-content span a{
+	color: #C1C3C4;
+	font-weight: 300;
+	font-family: BentonSans, sans-serif;
+	overflow-wrap: break-word;
 	letter-spacing: 1px;
-	border-radius: 4px;
 }
-.card-content:hover{
-	border: 1px solid #fff;
+.votes {
+	width: 40px;
+	padding: 5px;
+	/*// margin: 8px;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgb(241, 245, 248);
+	/*// border-left: 1px solid transparent;*/
 }
-.card-community{
-	background: #1A1A1B;
+.votes i{
+	margin-left: 10px;
+}
+.votes .vote-count {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px 10px 10px 4px;
+}
+.post-content {
+	padding: 5px;
+	color: #A6A8AA;
+}
+.post-content a {
+	color: blue;
+	text-decoration: blue;
+	font-size: 10px;
+}
+.posted-by {
+	font-size: 10px;
+}
+.post-action {
+	color: rgb(139, 139, 139);
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+}
+.post-action i {
+	margin: 5px;
+}
+.container-head{
+	margin: 40px 0 0px 40px;
+	font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: #fff;
+}
+.container-head > div{
+	margin: 0;
+	width:20rem;
+}
+.container-head .title{
 	padding: 20px;
-	color: #D1D4D6;
-	letter-spacing: 1px;
+	margin: 0;
+	width: 22.5rem;
+}
+.container-head p{
+	background: #1C416A;
+	margin: 0 20px;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	color: #fff;
 	border-radius: 4px;
+	font-size: 13px;
+	font-weight: 300;
+}
+.container-content div{
+	color: black;
+	margin: 10px;
+}
+.container-content .subreddit{
+
+	margin: 10px 20px;
+}
+.container-content p{
+	background: transparent;
+	color: black;
+	font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 8px;
+  text-transform: capitalize;
+  overflow-wrap: break-word;
+  border-radius: 4px;
+}
+.container-content .small-content{
+	display: inline-block;
+	margin: 0 20px;
+}
+.container-content div{
+	/*display: inline-block;*/
+	color: #1a1a1b;
+	font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.container-content div small{
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  word-break: break-word;
+  display: inline-block;
+}
+.side-container button{
+	font-size: 0.8rem;
+	height: 2.8rem;
+	width: 22.5rem;
+	font-weight: 400;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-radius: 4px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.post-sub{
+	color: #1C416A;
+	background: #fff;
+	border: 1px solid #1C416A;
+	border-radius: 4px;
+	margin: 20px 0 10px 0;
+}
+.post-btn{
+	display: block;
+	color: #fff;
+	background: #1C416A;
+	border: 1px solid #1C416A;
+}
+
+/* Rules section*/
+.rules-container{
+	margin: 40px 0 0px 40px;
+	background: #fff;
+}
+.rules-container .title{
+	padding: 20px 0 10px 20px;
+	border-radius: 6px;
+	background: #1C416A;
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.rules{
+	display: flex;
+	flex-direction: column;
+	margin: 40px 0 0px 40px;
+}
+.rules li{
+	list-style: decimal;
+	/*margin: 20px;*/
+	padding-bottom: 10px;
+	font-size: 14px;
+}
+.rule-list{
+	border-bottom: 1px solid #EFEFEF; 
+	margin-top: 10px;
+
+}
+.rules li:last-child{
+	border-bottom: none;
 }
