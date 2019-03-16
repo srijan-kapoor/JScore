@@ -53,7 +53,6 @@ table {
 }*/
 .menu{
 	background: #fff;
-	max-width: 1100px;
 	width: 100%;
 	/*display: inline-block;*/
 }
@@ -83,6 +82,7 @@ svg{
 	margin-top: 12px;
 	margin-right: 10px;
 	margin-left: 10px;
+	cursor: pointer;
 }
 .input-search{
 	margin: 0.6rem 1rem;
@@ -90,27 +90,38 @@ svg{
   outline: none;
   border: none;
   width: 60%;
-  height: 34px;
+  height: 36px;
   vertical-align: middle;
   border-radius: 4px;
   padding: 0px 20px 0px 20px;
   font-size: 0.8rem;
   display: inline-block;
+
 }
 .input-search:hover{
 	border: 1px solid rgb(215, 218, 220);
+	background: #fff;
 }
 .fa-search{
 	color: #fff;
 }
-
 .menu-items img{
-	margin: 12px 10px 0 20px;
+	margin: 17px 10px 0 20px;
 }
 .menu-items .sub{
-	margin: 12px 10px 0 0px;
+	margin: 12px 60px 0 0px;
 	font-size: 14px;
 	line-height: 2;
+}
+div > input {
+	margin: 0.6rem 0rem;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  height: 36px;
+  border-radius: 4px;
+  padding: 0px 20px 0px 0px;
+  font-size: 0.8rem;
 }
 .nav-button:hover{
 	border: 1px solid rgb(215, 218, 220);
@@ -126,10 +137,12 @@ svg{
 	font-weight: 500;
 	margin: 10px;
 	border-radius: 6px;
+	cursor: pointer;
 }
 .nav-btn-login{
 	background: #fff;
 	color: #1C66B3;
+	border: 1px solid #1C66B3;
 }
 
 /*Main section*/
@@ -184,6 +197,23 @@ li:first-child:active,
 li:first-child: focus{
 	color: #fff;
 }
+.subreddit-bar-two{
+	background: #fff;
+	max-width: auto;
+	width: 100%;
+}
+.subreddit-menu-list-two{
+	list-style: none;
+}
+.menu-list-two{
+	display: inline-block;
+	padding: 10px;
+	margin: 0 10px;
+	color: #A6ACB3;
+	font-size: 0.8rem;
+	cursor: pointer;
+	user-select: none;
+}
 
 /* Card Styles*/
 
@@ -205,7 +235,7 @@ li:first-child: focus{
 	grid-column-gap: 20px;
 }
 .post {
-	/*background-color: white;*/
+	background-color: white;
 	display: flex;
 	margin-bottom: 10px;
 	border: 1px solid rgb(194, 193, 193);
@@ -364,31 +394,70 @@ li:first-child: focus{
 .rules-container{
 	margin: 40px 0 0px 40px;
 	background: #fff;
+	border-radius: 6px;
 }
 .rules-container .title{
 	padding: 20px 0 10px 20px;
 	border-radius: 6px;
 	background: #1C416A;
 	color: #fff;
-	font-size: 14px;
+	font-size: 11px;
 	text-transform: uppercase;
 }
 .rules{
 	display: flex;
 	flex-direction: column;
-	margin: 40px 0 0px 40px;
+	margin: 40px 0 0px 20px;
 }
 .rules li{
 	list-style: decimal;
-	/*margin: 20px;*/
 	padding-bottom: 10px;
 	font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+
 }
 .rule-list{
 	border-bottom: 1px solid #EFEFEF; 
 	margin-top: 10px;
-
+}
+.rules-container ol {
+	list-style: decimal;
 }
 .rules li:last-child{
 	border-bottom: none;
+}
+.fa-sort-down{
+	font-size: 16px;
+	margin-right: 10px;
+}
+.sort{
+	margin-top: 14px;
+	cursor: pointer;
+}
+.bundle:hover{
+	border: 1px solid #fff;
+}
+/* Footer Styles */
+.footer-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap-column: 0.5rem;
+}
+.footer-content{
+	margin: 40px 0 0px 40px;
+	background: #fff;
+	padding: 10px;
+	border-radius: 6px;
+	font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.footer-align{
+	text-align: center;
+	margin-top: 20px;
+}
+.footer-align-2{
+	display: inline-block;
 }
