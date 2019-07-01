@@ -3,6 +3,7 @@
 let allItems = JSON.parse(localStorage.getItem('itemsDragDrop')) || [];
 const inputText = document.body.querySelector('.input');
 const ul = document.body.querySelector('ul');
+const li = document.body.getElementsByTagName('li');
 const plus = document.body.querySelector('.plus');
 const listItems = document.querySelectorAll('#items, .items');
 let dragSrcl = null;
@@ -20,6 +21,19 @@ function addItem(e){
 		inputText.value='';
 	}
 };
+
+// to delete items
+function removeItem(e) {
+	// console.log(e.target, 'remove')
+	if(e.target.classList.contains('items')) {
+		ul.removeChild(e.target);
+		var index = allItems.indexOf(e.target.innerText)
+		if(index > -1){
+			allItems.splice(index, 1);
+			localStorage.setItem('itemsDragDrop', JSON.stringify(allItems));
+		}
+	}
+}
 
 // Display items
 function displayItems(array){
@@ -84,6 +98,7 @@ function handleDragEnd(e){
 displayItems(allItems)
 // Event Listeners
 plus.addEventListener('click', addItem);
+ul.addEventListener('dblclick', removeItem);
 
 [].forEach.call(listItems, function(listItem){ // Similar to Array.prototype.forEach.call(...)
 	listItem.addEventListener('dragstart', handleDragStart, false)
