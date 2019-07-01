@@ -47,7 +47,7 @@ input{
 	margin-top: 10px;
 	cursor: move;
 }
-li:hover:after{
+.items:hover:after{
 	content: 'drag me';
 	font-size: 10px;
 	position: absolute;
@@ -67,4 +67,7 @@ ul{
   font-weight: 800;
   font-size: 1.2rem;
   cursor: pointer;
+}
+.items.over {
+  border: 2px dashed #000;
 }
